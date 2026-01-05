@@ -16,7 +16,10 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="text-5xl md:text-6xl font-extrabold tracking-tight"
+        className="text-5xl md:text-6xl font-extrabold tracking-tight
+                  bg-gradient-to-r from-white via-gray-200 to-gray-400
+                  bg-clip-text text-transparent
+                  drop-shadow-[0_0_20px_rgba(255,255,255,0.15)]"
       >
         {name}
       </motion.h1>
