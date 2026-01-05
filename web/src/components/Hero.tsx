@@ -32,6 +32,32 @@ export default function Hero() {
       >
         {tagline}
       </motion.p>
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
+        className="flex gap-4 pt-4"
+      >
+        <a
+          href={process.env.NEXT_PUBLIC_GITHUB_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 rounded-lg bg-white text-black font-medium
+                    hover:bg-gray-200 transition"
+        >
+          GitHub
+        </a>
+
+        <a
+          href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 rounded-lg border border-gray-700
+                    hover:border-gray-500 hover:bg-white/5 transition"
+        >
+          LinkedIn
+        </a>
+      </motion.div>
     </section>
   )
 }
