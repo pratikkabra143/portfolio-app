@@ -1,3 +1,7 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
 export default function Hero() {
   const name =
     process.env.NEXT_PUBLIC_SITE_NAME || 'Pratik Kabra'
@@ -8,13 +12,23 @@ export default function Hero() {
 
   return (
     <section className="flex flex-col items-center justify-center text-center gap-6">
-      <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="text-5xl md:text-6xl font-extrabold tracking-tight"
+      >
         {name}
-      </h1>
+      </motion.h1>
 
-      <p className="text-lg md:text-xl text-gray-400 max-w-2xl">
+      <motion.p
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.15, ease: 'easeOut' }}
+        className="text-lg md:text-xl text-gray-400 max-w-2xl"
+      >
         {tagline}
-      </p>
+      </motion.p>
     </section>
   )
 }
